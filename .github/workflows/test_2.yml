@@ -1,0 +1,19 @@
+name: Acción para Rama 2
+
+on:
+  push:
+    branches:
+      - test_2
+
+jobs:
+  print-messages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
+
+      - name: Imprimir mensajes en la consola para Rama 2
+        run: 
+          echo "Rama 2  Print 1"
+          echo "Rama 2  Print 2"
+          echo "Rama 2  Print 3"
